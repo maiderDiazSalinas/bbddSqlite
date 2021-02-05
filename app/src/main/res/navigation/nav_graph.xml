@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.example.bbddsqlite.FirstFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.example.bbddsqlite.SecondFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_second">
+        <action
+            android:id="@+id/action_SecondFragment_to_detalleCliente"
+            app:destination="@id/detalleCliente" />
+        <action
+            android:id="@+id/action_SecondFragment_to_sumarCliente"
+            app:destination="@id/sumarCliente" />
+    </fragment>
+    <fragment
+        android:id="@+id/detalleCliente"
+        android:name="com.example.bbddsqlite.DetalleCliente"
+        android:label="fragment_detalle_cliente"
+        tools:layout="@layout/fragment_detalle_cliente" >
+        <action
+            android:id="@+id/action_detalleCliente_to_editarCliente"
+            app:destination="@id/editarCliente" />
+        <action
+            android:id="@+id/action_detalleCliente_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editarCliente"
+        android:name="com.example.bbddsqlite.EditarCliente"
+        android:label="fragment_editar_cliente"
+        tools:layout="@layout/fragment_editar_cliente" >
+        <action
+            android:id="@+id/action_editarCliente_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sumarCliente"
+        android:name="com.example.bbddsqlite.SumarCliente"
+        android:label="fragment_sumar_cliente"
+        tools:layout="@layout/fragment_sumar_cliente" >
+        <action
+            android:id="@+id/action_sumarCliente_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+    </fragment>
+</navigation>
